@@ -1,0 +1,7 @@
+<% if is_saved.present? %>
+  <%= link_to "Bookmarked", saved_path(is_saved), method: :delete, remote: true,
+    class: "core-sprite bookmarked hide-text" %>
+<% else %>
+  <%= link_to "Bookmark", post_saveds_path(post), method: :post,
+    remote: true, class: "core-sprite bookmark hide-text" %>
+<% end %>

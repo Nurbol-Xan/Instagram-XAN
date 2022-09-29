@@ -1,0 +1,5 @@
+$('@follow-icon-account-<%= @account.id.to_s %>').
+  html('<%= link_to "Loved", account_follows_path(@account), method: :post, remote: true, class: "core-sprite love hide-text" %>');
+$('#follow-text-account-<%= @account.id.to_s %>').
+  html('<%= j render "accounts/follow_text", {follows: @account.follows} %>');
+console.log("delete like success");

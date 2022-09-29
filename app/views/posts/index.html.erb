@@ -1,0 +1,76 @@
+<div class="d-flex flex-column align-items-center mt-3">
+  <div class="col-xl-7 col-lg-8 col-md-10 col-sm-11 post-card">
+    <div class="card">
+      <div class="card-header">
+        Create Post
+      </div>
+      <div class="card-body">
+        <%= form_for @post, :html => {:multipart => true, :class => "dropzone upload-images p-0 border-0"} do |f| %>
+          <div class="form-group row mt-2">
+            <div class="col-auto pr-0">
+              <%= image_tag avatar_url(current_account), class: "post-author-icon" %>
+            </div>
+            <div class="col pl-0">
+              <%= f.text_field :content, class: "form-control border-0",
+                placeholder: "Say something about this ..." %>
+            </div>
+          </div>
+          <div class="fallback">
+           
+          </div>
+          <div class="dz-message m-0"></div>
+          <div class="dropzone-previews mb-3">
+            <div class="upload-photos-icon">
+                <%= file_field_tag "images[]", type: :file, multiple: true, class: "insta-text1" %>
+                <i class="fa fa-plus fa-2x" aria-hidden="true" style="color:#dddfe2"></i>
+            </div>
+          </div>
+          <%= f.submit "Post", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="posts">
+      <%= render 'posts_list' %>
+    </div>
+  </div>
+</div>
+<script type="text/javascripts">
+      Dropzone.autoDiscover = false;
+
+      $(document).ready(function(){
+        $(".upload-images").dropzone({
+          addRemoveLinks: true,
+          maxFilesize: 1,
+          autoProcessQueue: false,
+          uploadMultiple: true,
+          parallelUploads: 100,
+          maxFiles: 100,
+          paramName: "images",
+          previewsContainer: ".dropzone-previews",
+          clickable: ".upload-photos-icon",
+          thumbnailWidth: 100,
+          thumbnailHeight: 100,
+      
+          init: function(){
+            var myDropzone = this;
+      
+            this.element.querySelector("input[type=submit]").addEventListener("click", function(e){
+              e.preventDefault();
+              e.stopPropagation();
+              myDropzone.processQueue();
+            });
+      
+            this.on("successmultiple", function(files, response){
+              window.location.reload();
+              console.log("HElllo")
+            });
+      
+            this.on("errormultiple", function(files, response){
+              toastr.error(response);
+            });
+          }
+        })
+      });
+    </script>
+

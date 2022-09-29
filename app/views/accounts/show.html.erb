@@ -1,0 +1,49 @@
+<div class="row justify-content-md-center profile-wrapper">
+  <div class="col-md-4 text-center">
+    <%= image_tag avatar_url(@account), width: '152', height: '152', class: "round-img" %>
+  </div>
+  <div class="col-md-6">
+    <div class="row">
+     <p class="username"><%= @account.name %>
+      <% if @account == current_account %>
+        <%= link_to "Edit Profile", edit_account_registration_path, class: "btn btn-outline-primary" %>
+      <% end %>
+    </p>
+    <div class="row">
+      <div id="follow-icon-account-<%= @account.id.to_s %>">
+        <%= render "follow_icon", {is_follow: @account.is_follow(current_account), account: @account} %>
+      </div>
+      <p class="email"><%= @account.email %></p>
+      <p>Follows: <%= @account.follows.size %></p>
+      <p>Following: <%= @account.followings.size %></p>
+    </div>
+  </div>
+  </div>
+  
+  <div class="profile-tab">
+    <% if @account == current_account %>
+    <ul class="nav nav-tabs " id="myTab" role="tablist">
+       <li class="mx-3" role="presentation">
+        <button class="nav-link nav-item active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Posts</button>
+      </li>
+      <li class="ml-3" role="presentation">
+        <button class="nav-link nav-item" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Saved</button>
+      </li>
+    </ul>
+    <% end %>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="row">
+          <%= render "post", {posts: @posts} %>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="row">
+          <%= render "post", {posts: @saved_post} if @account == current_account %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  

@@ -1,0 +1,17 @@
+<strong>
+  <% follows.each.with_index do |follow, index| %>
+      <% if follows.size == 1 %>
+          <%= follow.account.name %> </strong> follow this
+      <% elsif follow == follows.last %>
+          </strong>and<strong>
+  <%= + follows.account.name %></strong> follow this
+      <% elsif index > 1 %>
+          </strong><%= "and " + (follows.size-index).to_s + " others " %> follow this
+          <% break %>
+      <% elsif index==follows.size-2 || index==1%>
+          <%= follow.account.name %>
+      <% else %>
+          <%= follow.account.name + ", " %>
+      <% end %>
+  <% end %>
+  </strong>

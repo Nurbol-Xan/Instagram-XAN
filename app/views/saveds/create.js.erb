@@ -1,0 +1,3 @@
+$('#saved-icon-post-<%= @post.id.to_s %>').
+  html('<%= j render "posts/saved_icon", {is_saved: @is_saved, post: @post} %>');
+console.log("create saved success");

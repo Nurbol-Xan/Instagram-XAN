@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container-fluid container">
+        <a class="navbar-brand nav-brand insta-text" href="/">InstagramXan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <%= form_tag accounts_path, method: :get, class: "search", id: "accounts-search",
+            remote: true do %>
+            <%= text_field_tag :term, params[:term], class: "form-control me-3 text-center common-btn",
+              placeholder: "Search", autocomplete: "off" %>
+            <div id="accounts-result"></div>
+          <% end %>
+        
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0  m-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-brand explore-icon insta-text" href="#"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-brand not-icon insta-text fs-4" href="#"></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="profile-icon" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <%= image_tag avatar_url(current_account), width: '32', height: '32', class: "round-img rounded-circle" %>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><%= link_to "Profile", account_path(current_account), class:'dropdown-item' %></li>
+                <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><%=button_to 'Log Out', destroy_account_session_path, method: :delete, class:"dropdown-item"%></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>

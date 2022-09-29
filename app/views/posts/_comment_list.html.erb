@@ -1,0 +1,15 @@
+<% post.comments.each do |comment| %>
+  <div class="mb-2">
+    <% if comment.account == current_account %>
+      <%= link_to "Delete comment", comment_path(comment),
+        method: :delete, remote: true, class: "core-sprite delete-comment hide-text" %>
+    <% end %>
+    <span>
+      <strong>
+        <%= link_to comment.account.name, account_path(comment.account),
+          class: "no-text-decoration normal-color" %>
+      </strong>
+    </span>
+    <span><%= comment.content %></span>
+  </div>
+<% end %>

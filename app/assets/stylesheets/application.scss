@@ -1,0 +1,544 @@
+@import "bootstrap";
+@import "toastr";
+@import "font-awesome";
+@import "dropzone/dropzone";
+
+.body{
+    background-color: #fafafa;
+    font-size: 14px;
+    color: #262626;
+}
+
+.navbar{
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+    height: 77px;
+}
+
+.nav-brand{
+    background-image: image-url("insta-icons.png");
+    background-size: 405px 379px;
+    background-repeat: no-repeat;
+}
+
+.core-sprite{
+   background-image: image-url("insta-icons.png");
+    background-size: 405px 379px;
+    background-repeat: no-repeat;
+}
+
+.navbar-brand{
+    background-position: -176px 0;
+    height: 35px;
+    width: 176px;
+}
+
+.mar-lef{
+    margin-left: 15px;
+}
+
+.insta-text{
+    display: flex;
+    overflow: hidden;
+    text-indent: 110%; 
+    white-space: nowrap;
+}
+
+.insta-text1{
+    display: flex;
+    position:absolute;
+    top:110px;
+    left: 15px;
+    text-indent: 110%; 
+    font-size:70px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.explore-icon{
+    background-position: -50px -355px;
+    height: 24px;
+    width: 24px;
+    margin-top: 3px;
+    margin-left: 30px;
+}
+
+.not-icon{
+    background-position: -353px -298px;
+    height: 24px;
+    width: 24px;
+    margin-top: 3px;
+    margin-left: 30px;
+}
+.profile-icon{
+    background-position: -308px -176px;
+    height: 24px;
+    width: 24px;
+    margin-left: 30px;
+    border-radius: 50%;
+}
+
+.profil-icon{
+    background-position: -308px -176px;
+    height: 24px;
+    width: 24px;
+}
+
+.search{
+    margin-left: 300px;
+}
+
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+  height: 77px;
+}
+
+.core-sprite {
+  background-image: image-url("insta-icons.png");
+  background-size: 405px 379px;
+  background-repeat: no-repeat;
+}
+
+.navbar-brand {
+  background-position: -176px 0;
+  height: 35px;
+  width: 176px;
+}
+
+.hide-text {
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+}
+
+.explore-icon {
+  background-position: -50px -355px;
+  height: 24px;
+  width: 24px;
+}
+
+.notification-icon {
+  background-position: -353px -298px;
+  height: 24px;
+  width: 24px;
+}
+
+.profile-icon {
+  background-position: -308px -176px;
+  height: 24px;
+  width: 24px;
+}
+
+
+
+.box {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  padding: 10px 0;
+  margin: 0 0 10px;
+}
+
+.brand-name-img {
+  background-position: 0 0;
+  height: 51px;
+  width: 175px;
+}
+
+// Landing
+.landing-left {
+  .dummy-phone {
+    background-image: image-url("dummy-phone-2x.png");
+    background-repeat: no-repeat;
+    background-position: right 0;
+    background-size: 454px 618px;
+    position: relative;
+    height: 618px;
+    margin-left: -35px;
+    margin-right: -15px;
+  }
+
+  .screen-shot {
+    position: absolute;
+    top: 99px;
+    right: 63px;
+
+    .item {
+      position: absolute;
+    }
+  }
+}
+
+.landing-right {
+  .form-login {
+    width: 350px;
+
+    form {
+      padding: 0 40px;
+
+      .btn-primary {
+        width: 100%;
+        line-height: 14px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      input {
+        border: 1px solid #efefef;
+      }
+
+      .form-check-label {
+        padding: 0;
+        font-size: 15px;
+        color: #262626;
+      }
+    }
+
+    .brand-name-img {
+      margin: 22px auto 8px;
+    }
+  }
+
+  .redirect-links {
+    width: 350px;
+  }
+}
+
+footer .nav-item {
+  color: #003569 !important;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.light-color {
+  color: #999;
+}
+
+.carousel-fade {
+  .carousel-item.active {
+    opacity: 1;
+    display: block;
+  }
+
+  .carousel-item {
+    transition: opacity 0.6s ease-in-out;
+    opacity: 0;
+    position: relative;
+    display: block;
+  }
+
+  .carousel-item:not(.active) {
+    position: absolute;
+    top: 0px;
+  }
+}
+
+.profile-wrapper {
+  padding: 60px 0;
+  border-bottom: 1px solid #efefef;
+
+  .username {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 200;
+  }
+
+  .email {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.round-img {
+  border-radius: 50%;
+}
+
+.common-btn {
+  height: 28px;
+  line-height: 24px;
+  padding: 0 24px;
+  border-color: #dbdbdb;
+  font-size: 14px;
+}
+
+.edit-profile-btn {
+  margin: 5px 0 0 15px;
+  font-weight: bold;
+}
+
+.setting {
+  margin: 7px 0 0 10px;
+  background-color: transparent;
+  background-position: -125px -355px;
+  height: 24px;
+  width: 24px;
+  border: none;
+}
+.setting:hover {
+  cursor: pointer;
+}
+
+.card-img-top{
+  border: 2px solid #000;
+}
+
+.edit-profile-wrapper {
+  margin: 60px 0 0;
+
+  .left-col {
+    border: 1px solid #dbdbdb;
+    padding: 0;
+    background-color: white;
+
+    .list-group-item {
+      border: none;
+      color: #262626;
+      border-radius: 0;
+      font-size: 16px;
+      border-left: 2px solid transparent;
+    }
+
+    .list-group-item:first-child {
+      font-weight: bold;
+      border-left-color: #262626;
+    }
+
+    .list-group-item:not(:first-child):hover {
+      border-left-color: #dbdbdb;
+    }
+  }
+
+  .right-col {
+    border: 1px solid #dbdbdb;
+    border-left: none;
+    background-color: white;
+
+    .username-img {
+      margin: 32px 0;
+
+      .col-sm-9 {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+
+    .form-group {
+      font-size: 16px;
+    }
+  }
+}
+
+.post-author-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+// Customize upload photos form
+.upload-photos-icon:hover {
+  cursor: pointer;
+}
+
+.dz-preview.dz-image-preview {
+  margin: 2px;
+}
+
+.dz-image {
+  border-radius: 0px !important;
+
+  img {
+    width: 100%;
+  }
+}
+
+.dz-remove {
+  @extend .core-sprite;
+  @extend .hide-text;
+  position: absolute;
+  top: 9px;
+  right: 5px;
+  z-index: 20;
+  width: 18px;
+  height: 18px;
+  background-position: -386px -25px;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s liner;
+  transition: opacity 0.2s liner;
+}
+
+.dropzone .dz-preview:hover .dz-remove {
+  opacity: 1;
+}
+
+.upload-photos-icon {
+  height: 120px;
+  width: 120px;
+  border: 2px dashed #dddfe2;
+  border-radius: 2px;
+  padding: 48px;
+  display: inline-block;
+  margin: 2px;
+}
+
+.no-text-decoration:hover {
+  text-decoration: none;
+  color: #262626;
+}
+
+.normal-color {
+  color: #262626;
+}
+
+// Customize post views
+.post {
+  .card-header {
+    background-color: white;
+  }
+
+  .card-body {
+    padding: 5px 16px 5px;
+  }
+
+  .actions {
+    margin: 12px 0;
+  }
+
+  .post-time {
+    margin-top: 5px;
+    font-size: 10px;
+  }
+
+  .comment-input {
+    font-size: 14px;
+    resize: none;
+  }
+
+  .previous-btn {
+    background-position: -281px -280px;
+    height: 30px;
+    opacity: 1;
+    width: 30px;
+  }
+
+  .next-btn {
+    background-position: -353px 0px;
+    height: 30px;
+    opacity: 1;
+    width: 30px;
+  }
+}
+
+.love {
+  background-position: -325px -329px;
+  height: 24px;
+  width: 24px;
+}
+
+.loved {
+  @extend .love;
+  background-position: -200px -330px;
+}
+
+.comment {
+  @extend .love;
+  background-position: -258px -175px;
+  margin-left: 8px;
+}
+
+.bookmark {
+  @extend .love;
+  background-position: -150px -355px;
+}
+
+.bookmarked {
+  @extend .love;
+  background-position: -353px -273px;
+}
+
+.comment-list {
+  height: 310px;
+  overflow: auto;
+}
+
+.post-show-img {
+  background-color: #fafafa;
+  margin: -10px 0;
+}
+
+.delete-post-icon {
+  color: #262626;
+  font-size: 20px;
+}
+
+.delete-comment {
+  width: 11px;
+  height: 11px;
+  background-position: -216px -112px;
+  float: right;
+  margin: 5px 0 0 10px;
+}
+
+.profile-tab {
+  margin-top: 60px;
+border-top: 1px solid #ddd;
+  .nav-tabs {
+    border: 0;
+    
+    margin-left: 50%;
+
+    .nav-item {
+      border-radius: 0;
+      border: 0;
+      border-top: 1px solid transparent;
+      margin-top: -1px;
+      padding: 10px 0;
+      background: transparent;
+      font-weight: bold;
+      color: #999;
+    }
+
+    .nav-item.active {
+      color: #262626;
+      border-top: 1px solid #262626;
+    }
+  }
+
+  .post-stat {
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 22%;
+    height: 30%;
+  }
+
+  .col-4:hover .post-stat {
+    background-color: rgba(0,0,0,.3);
+    opacity: 1;
+  }
+
+  .image-preview {
+    margin-bottom: 30px;
+  }
+}
+
+.search-result-item {
+  padding: 15px;
+}
+
+.search-result-item:hover {
+  background-color: #fafafa;
+}
+
+.popover {
+  border-radius: 0;
+}
+
+.popover-body {
+  background: #fff;
+  padding: 0;
+}
