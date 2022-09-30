@@ -3,7 +3,7 @@ class FollowsController < ApplicationController
 
   def create
     @account = Account.find(params[:account_id])
-    @follow = @account.follows.create(fol_params)
+    @follow = @account.follows.build(fol_params)
     @following = current_account.followings.build(fol_params)
     @following.id = @follow.id
     @follow.account = @account  

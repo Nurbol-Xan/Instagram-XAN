@@ -8,11 +8,32 @@
     font-size: 14px;
     color: #262626;
 }
+/* set Color */ 
+body {
+      background : linear-gradient(132deg, #24c6dc, #3494e6, #ec6ead, #f80759, #bc4e9c); 
+      background-size : 400% 400%;
+       animation : Gradient 15s ease infinite; 
+}
+/* Animate Background*/
+@keyframes Gradient {
+    0% {
+         background-position: 0% 50%
+       }
+   50% { 
+         background-position: 100% 50%
+       }
+  100% {
+      background-position: 0% 50%
+      }
+}
+
+
 
 .navbar{
     background-color: #fff;
     border-bottom: 1px solid rgba(0,0,0,.0975);
     height: 77px;
+    
 }
 
 .nav-brand{
@@ -23,6 +44,13 @@
 
 .core-sprite{
    background-image: image-url("insta-icons.png");
+    background-size: 405px 379px;
+    background-repeat: no-repeat;
+}
+
+
+.core-sprite1{
+   background-image: image-url("following.png");
     background-size: 405px 379px;
     background-repeat: no-repeat;
 }
@@ -67,8 +95,33 @@
     background-position: -353px -298px;
     height: 24px;
     width: 24px;
-    margin-top: 3px;
-    margin-left: 30px;
+    margin-top: -3px;
+    margin-left: 20px;
+}
+
+.home-icon{
+    height: 24px;
+    width: 24px;
+    margin-top: -6px;
+    margin-left: 25px;
+}
+
+.all-icon{
+    height: 24px;
+    width: 24px;
+    margin-top: -3px;
+    margin-left: 25px;
+    margin-right:5px;
+}
+
+.icon-insta{
+  font-family: 'Playfair Display', serif;
+	font-size: 1.4rem;
+	font-style: italic;
+}
+
+.new-icon{
+  margin-bottom: 25%;
 }
 .profile-icon{
     background-position: -308px -176px;
@@ -113,6 +166,12 @@
   white-space: nowrap;
 }
 
+.hide-text1 {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .explore-icon {
   background-position: -50px -355px;
   height: 24px;
@@ -136,7 +195,7 @@
 .box {
   background-color: #fff;
   border: 1px solid #e6e6e6;
-  border-radius: 1px;
+  border-radius: 6px;
   padding: 10px 0;
   margin: 0 0 10px;
 }
@@ -281,7 +340,7 @@ footer .nav-item {
 }
 
 .card-img-top{
-  border: 2px solid #000;
+  border: 2px solid #FF00FF;
 }
 
 .edit-profile-wrapper {
@@ -433,9 +492,24 @@ footer .nav-item {
 }
 
 .love {
+  position:absolute;
   background-position: -325px -329px;
   height: 24px;
   width: 24px;
+}
+
+.follow {
+  position:absolute;
+  
+  height: 40px;
+  width: 70px;
+}
+
+.followed {
+    position:absolute;
+  
+  height: 40px;
+  width: 70px;
 }
 
 .loved {
@@ -446,17 +520,19 @@ footer .nav-item {
 .comment {
   @extend .love;
   background-position: -258px -175px;
-  margin-left: 8px;
+  margin-left: 50px;
 }
 
 .bookmark {
   @extend .love;
   background-position: -150px -355px;
+  margin-left: 90%;
 }
 
 .bookmarked {
   @extend .love;
   background-position: -353px -273px;
+  margin-left: 90%;
 }
 
 .comment-list {
@@ -472,6 +548,7 @@ footer .nav-item {
 .delete-post-icon {
   color: #262626;
   font-size: 20px;
+  margin-left: 75%;
 }
 
 .delete-comment {
@@ -526,6 +603,16 @@ border-top: 1px solid #ddd;
   }
 }
 
+
+  .post-stat {
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 22%;
+    height: 30%;
+  }
+  
 .search-result-item {
   padding: 15px;
 }

@@ -1,7 +1,7 @@
 <% if accounts.present? %>
   <% accounts.each do |account| %>
     <%= link_to account_path(account), class: "no-text-decoration normal-color" do %>
-      <div class="search-result-item"><%= account.name %></div>
+      <div class="search-result-item"><%= image_tag avatar_url(account), width: '20', height: '20', class: "round-img" %>   <%= account.name %></div>
     <% end %>
   <% end %>
 <% else %>

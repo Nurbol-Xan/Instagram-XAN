@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'posts#index'
-  
+  get "/new", to: "posts#new"
+  get "/all", to: "posts#all"
   devise_for :accounts 
   
   

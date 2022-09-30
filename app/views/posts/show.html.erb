@@ -5,20 +5,27 @@
         <%= render "photos", {post: @post} %>
       </div>
     </div>
+    <br/>
     <div class="col-lg-4 col-md-5 mt-sm-4 mt-md-0">
       <div class="row px-3 d-flex align-items-center">
+        <div class="col-2">
         <%= link_to account_path(@post.account), class: "no-text-decoration" do %>
           <%= image_tag avatar_url(@post.account), class: "post-author-icon" %>
         <% end %>
+        </div>
+        <div class="col-8">
         <%= link_to account_path(@post.account), class: "normal-color no-text-decoration d-flex align-self-center",
           title: @post.account.name do %>
           <strong><%= @post.account.name %></strong>
         <% end %>
+        </div>
+        <div class="col-1">
         <% if @post.account.id == current_account.id %>
           <%= link_to post_path(@post), method: :delete, class: "ml-auto delete-post-icon mx-0 my-auto" do %>
             <i class="far fa-trash-alt" aria-hidden="true"></i>
           <% end %>
         <% end %>
+        </div>
       </div>
       <hr class="mb-0">
       <div class="comment-list py-2">
@@ -39,15 +46,18 @@
         <div id="like-icon-post-<%= @post.id.to_s %>">
           <%= render "like_icon", {is_liked: @is_liked, post: @post} %>
         </div>
-        <a href="#" class="core-sprite comment hide-text">Comment</a>
+        <a href="#" class="core-sprite comment hide-text"></a>
         <div id="saved-icon-post-<%= @post.id.to_s %>" class="ml-auto">
           <%= render "saved_icon", {is_saved: @post.is_saved(current_account), post: @post} %>
         </div>
       </div>
+      <br />
+      <p><%= @post.likes.size %> likes</p>
       <div id="like-text-post-<%= @post.id.to_s %>">
         <%= render "like_text", {likes: @likes} %>
       </div>
       <div class="light-color post-time"><%= time_ago_in_words(@post.created_at).upcase %> AGO</div>
+      <p class="light-color post-time">View all <%= @post.comments.size %> comments</p>
       <hr>
       <div class="row actions" id="comment-form-post-<%= @post.id.to_s %>">
         <%= render 'comment_form', post: @post %>

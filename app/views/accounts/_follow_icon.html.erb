@@ -1,7 +1,7 @@
 <% if is_follow.present? %>
-  <%= link_to "Love", follow_path(is_follow), method: :delete, remote: true,
-    class: "core-sprite loved hide-text" %>
+  <%= link_to "Unfollow", follow_path(is_follow), method: :delete, remote: true,
+    class: "btn btn-secondary" %>
 <% else %>
-  <%= link_to "Loved", account_follows_path(account), method: :post, remote: true,
-    class: "core-sprite love hide-text" %>
+  <%= link_to "Follow", account_follows_path(account), method: :post, remote: true,
+    class: "btn btn-primary" %>
 <% end %>

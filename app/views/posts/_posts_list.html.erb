@@ -9,7 +9,7 @@
         <strong><%= post.account.name %></strong>
       <% end %>
       <% if post.account == current_account %>
-        <%= link_to post_path(post), method: :delete, class: "ml-auto delete-post-icon mx-0 my-auto" do %>
+        <%= link_to post_path(post), method: :delete, class: "ml-auto delete-post-icon" do %>
           <i class="far fa-trash-alt" aria-hidden="true"></i>
         <% end %>
       <% end %>
@@ -22,11 +22,13 @@
         <div id="like-icon-post-<%= post.id.to_s %>">
           <%= render "like_icon", {is_liked: post.is_liked(current_account), post: post} %>
         </div>
-        <a href="#" class="core-sprite comment hide-text">Comment</a>
+        <a href="#" class="core-sprite comment hide-text"></a>
         <div id="saved-icon-post-<%= post.id.to_s %>" class="ml-auto">
           <%= render "saved_icon", {is_saved: post.is_saved(current_account), post: post} %>
         </div>
       </div>
+      <br />
+      <p><%= post.likes.size %> likes</p>
       <div id="like-text-post-<%= post.id.to_s %>">
         <%= render "like_text", {likes: post.likes} %>
       </div>
@@ -40,6 +42,7 @@
       </div>
       <%= link_to time_ago_in_words(post.created_at).upcase + " AGO", post_path(post),
         class: "light-color post-time no-text-decoration" %>
+         <p class="light-color post-time">View all <%= post.comments.size %> comments</p>
       <hr>
       <div class="row actions" id="comment-form-post-<%= post.id.to_s %>">
         <%= render 'comment_form', {post: post} %>

@@ -6,6 +6,14 @@ class PostsController < ApplicationController
     @posts = Post.all.limit(10).includes(:photos, :likes)
     @post = Post.new
   end
+  
+  def all
+     @posts = Post.all
+  end
+  
+  def new
+    @post = Post.new
+  end
 
   def create
     @post = current_account.posts.build(post_params)
