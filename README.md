@@ -8,12 +8,11 @@
 - [About](#about)
 - [Homepage](#homepage)
     - [Instructions for use](#instructions-for-use)
-        - [Register](#register-or-login-to-the-created-account)
-        - [About the project](#about-the-project)
-        - [About task and subtask](#about-task-and-subtask)
-        - [About discussion and answer](#about-discussion-and-answer)
-        - [About attachments](#about-attachment)
-    - [Project User and Admin](#project-user-and-admin)
+        - [Register](#register-and-login-to-the-created-account)
+        - [All posts](#all-posts)
+        - [Create Post with photo](#create-post-with-photo)
+        - [Account search by name](#account-search-by-name)
+    - [Account profile](#account-profile)
 - [Conclusion](#conclusion)
 
 
@@ -24,23 +23,58 @@
 ![Database](https://img.shields.io/badge/database-PostgreSQL-red)
 
 ## About
-
-I made this project following [Basecamp](https://basecamp.com/). Its main features are to-do lists, milestone management, forum-like messaging, file sharing and time tracking.<br/>
-
 ## Task
-TODO - What is the problem? And where is the challenge?
+>I tried to make a real [Instagram](https://instagram.com) clone using the ruby ​​on rails framework in the ushby project. His mission:
+- [+]  User authentication
+- [+] Create/view/delete post.
+- [+] Save/like/comment on the post.
+- [+] For account: follow/unfollow.
+- [+] The time the post was created.
+- [+] Search account by name.<br/>
 
+
+### **Instructions for use:**
 ## Description
-TODO - How have you solved the problem?
 
+#
+> ### Register and login to the created account:
+#
+
+![This is a register png](/photo_readme/register.png)
+![This is a register png](/photo_readme/Login.png)
+
+#
+> ### All posts:
+#
 ## Installation
-TODO - How to install your project? npm install? make? make re?
+![This is a post](/photo_readme/all-posts.png)
 
+
+#
+> ### Create Post with photo
+#
+
+![This is a upload](/photo_readme/upload.png)
+
+
+#
+## Account search by name
+#
 ## Usage
-TODO - How does it work?
-```
-./my_project argument1 argument2
-```
+![This is a search](/photo_readme/search.png)
+
+#
+> ### Account profile
+#
+
+![This is a upload](/photo_readme/profile.png)
+
+#
+
+#
+## Conclusion:
+
+> In conclusion, during the course of making this project, I improved not only ruby ​​on rails, but also my ability to work in other projects.
 
 ### The Core Team
 
@@ -48,52 +82,4 @@ TODO - How does it work?
 <span><i>Made at <a href='https://qwasar.io'>Qwasar Silicon Valley</a></i></span>
 <span><img alt='Qwasar Silicon Valley Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px'></span>
 
-
-
-
-## About
-
-I made this project following [Basecamp](https://basecamp.com/). Its main features are to-do lists, milestone management, forum-like messaging, file sharing and time tracking.<br/>
-
-### **Instructions for use:**
-#
-> ### Register or login to the created account:
-#
-
-![This is a register gif](/photo_readmy/register.gif)
-
-#
-> ### About the project:
-#
-
-![This is a project gif](/photo_readmy/project.gif)
-
-#
-> ### About task and subtask:
-#
-
-![This is a task and a subtask gif](/photo_readmy/task_and_subtask.gif)
-
-#
-> ### About discussion and answer:
-#
-
-![This is a discussion gif](/photo_readmy/discussion.gif)
-
-#
-> ### About attachment:
-#
-
-![This is a attachment gif](/photo_readmy/attachment.gif)
-
-#
-## Project User and Admin:
-#
-
-![This is a role gif](/photo_readmy/roly.gif)
-
-#
-## Conclusion:
-
-> In conclusion, during the course of making this project, I improved not only ruby ​​on rails, but also my ability to work in other projects.
 
