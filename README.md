@@ -23,7 +23,7 @@
 ![Database](https://img.shields.io/badge/database-PostgreSQL-red)
 
 ## About
-## Task
+
 >I tried to make a real [Instagram](https://instagram.com) clone using the ruby ​​on rails framework in the ushby project. His mission:
 - [+]  User authentication
 - [+] Create/view/delete post.
@@ -34,7 +34,7 @@
 
 
 ### **Instructions for use:**
-## Description
+
 
 #
 > ### Register and login to the created account:
@@ -46,7 +46,7 @@
 #
 > ### All posts:
 #
-## Installation
+
 ![This is a post](/photo_readme/all-posts.png)
 
 
@@ -60,7 +60,7 @@
 #
 ## Account search by name
 #
-## Usage
+
 ![This is a search](/photo_readme/search.png)
 
 #
@@ -76,10 +76,6 @@
 
 > In conclusion, during the course of making this project, I improved not only ruby ​​on rails, but also my ability to work in other projects.
 
-### The Core Team
 
-
-<span><i>Made at <a href='https://qwasar.io'>Qwasar Silicon Valley</a></i></span>
-<span><img alt='Qwasar Silicon Valley Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px'></span>
 
 
