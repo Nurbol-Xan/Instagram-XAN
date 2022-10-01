@@ -17,8 +17,8 @@
 
   <body>
     <%= render 'navbar/navbar' if current_account %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <p class="alert alert-primary" role="alert"><%= notice %></p>
+    <p class="alert alert-danger" role="alert"><%= alert %></p>
     <div class="container">
       <%= yield %>
     </div>
