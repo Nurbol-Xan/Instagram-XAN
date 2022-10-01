@@ -23,6 +23,7 @@ gem 'coffee-rails'
 gem "rails_admin", "~> 3.0"
 gem "sassc-rails"
 gem "jbuilder"
+gem "tzinfo-data"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 

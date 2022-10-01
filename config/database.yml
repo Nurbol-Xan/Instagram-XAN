@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: instagram_xan_production
-  username: instagram_xan
-  password: <%= ENV["INSTAGRAM_XAN_DATABASE_PASSWORD"] %>
+  database:  <%= ENV["MY_APP_DATABASE_URL"] %>
+  # username: instagram_xan
+  # password: <%= ENV["INSTAGRAM_XAN_DATABASE_PASSWORD"] %>
