@@ -14,4 +14,9 @@ class AccountsController < ApplicationController
         @saved_post = Post.joins(:saveds).where("saveds.account_id=?", current_account.id).
         includes(:photos, :likes, :comments) if @account == current_account
     end
+    
+    def edit
+      @account = Account.find(params[:id])
+      @account.update_attribute(:avatar, params[:account][:avatar])
+    end
 end

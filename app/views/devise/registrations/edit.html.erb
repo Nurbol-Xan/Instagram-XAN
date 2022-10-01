@@ -12,7 +12,9 @@
 
       <div class="row username-img">
         <div class="col-sm-3 text-right">
-          <%= image_tag avatar_url(@account), width: '38', height: '38', class: "round-img" %>
+          <%= image_tag avatar_url(@account), width: '38', height: '38', class: "round-img" do %>
+            <%= f.file_field :avatar, type: :file%>
+          <% end %>
         </div>
         <div class="col-sm-9">
           <p><%= @account.name %></p>

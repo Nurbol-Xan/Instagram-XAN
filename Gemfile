@@ -84,3 +84,5 @@ gem "figaro"
 gem "dropzonejs-rails"
 gem 'sass-rails'
 gem 'coffee-rails'
+gem "rails_admin", "~> 3.0"
+gem "sassc-rails"

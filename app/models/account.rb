@@ -5,6 +5,7 @@ class Account < ApplicationRecord
   has_many :saveds
   has_many :follows, -> {order(:created_at => :desc)}
   has_many :followings, -> {order(:created_at => :desc)}
+  has_one_attached :avatar
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
