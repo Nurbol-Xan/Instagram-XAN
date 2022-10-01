@@ -28,7 +28,10 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><%= link_to "Profile", account_path(current_account), class:'dropdown-item' %></li>
-                <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                <li><%= link_to "Edit Profile", edit_account_registration_path, class: "dropdown-item" %></li>
+                <% if current_account.admin == true %>
+                <li><a class="dropdown-item" href="/admin">Admin</a></li>
+                <% end %>
                 <li><hr class="dropdown-divider"></li>
                 <li><%=button_to 'Log Out', destroy_account_session_path, method: :delete, class:"dropdown-item"%></li>
               </ul>

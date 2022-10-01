@@ -526,13 +526,13 @@ footer .nav-item {
 .bookmark {
   @extend .love;
   background-position: -150px -355px;
-  margin-left: 90%;
+  margin-left: 80%;
 }
 
 .bookmarked {
   @extend .love;
   background-position: -353px -273px;
-  margin-left: 90%;
+  margin-left: 80%;
 }
 
 .comment-list {
@@ -548,7 +548,7 @@ footer .nav-item {
 .delete-post-icon {
   color: #262626;
   font-size: 20px;
-  margin-left: 75%;
+  margin-left: 70%;
 }
 
 .delete-comment {
