@@ -24,6 +24,9 @@ gem "rails_admin", "~> 3.0"
 gem "sassc-rails"
 gem "jbuilder"
 gem "tzinfo-data"
+gem 'aws-sdk'
+gem 'paperclip', git: 'https://github.com/sd/paperclip', branch: 'remove-mimemagic'
+gem "mini_magick", "~> 4.11"
 gem "aws-sdk-s3", require: false
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
